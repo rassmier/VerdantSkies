@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dw3srodtjoemi"]
+
+[ext_resource type="PackedScene" uid="uid://dy08mltwm2tep" path="res://scenes/hud.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://bemchgc4sbpvf" path="res://scenes/levels/base_level.tscn" id="3_sugp2"]
+
+[node name="Main" type="Node2D" unique_id=1155215731]
+
+[node name="LevelRoot" parent="." unique_id=1892124042 instance=ExtResource("3_sugp2")]
+
+[node name="HUD" parent="." unique_id=3728017 instance=ExtResource("2_0wfyh")]

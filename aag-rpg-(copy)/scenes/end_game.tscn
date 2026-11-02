@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://f5wd314ep37t"]
+
+[ext_resource type="Script" uid="uid://c4kgojiiwo1yg" path="res://scripts/end_game.gd" id="1_0h6i1"]
+[ext_resource type="FontFile" uid="uid://das7135gedwsc" path="res://assets/images/fonts/PirataOne-Regular.ttf" id="1_5pifh"]
+[ext_resource type="Texture2D" uid="uid://bc1bhl0fdq4rb" path="res://assets/images/ui/buttons/Button_Blue_3Slides.png" id="2_0h6i1"]
+[ext_resource type="PackedScene" uid="uid://30jf6d2adcno" path="res://scenes/end_game_background.tscn" id="2_6lcay"]
+[ext_resource type="Texture2D" uid="uid://bmtgphc7qn8f3" path="res://assets/images/ui/buttons/Button_Blue_3Slides_Pressed.png" id="3_6lcay"]
+[ext_resource type="Texture2D" uid="uid://bpete1kq3785i" path="res://assets/images/ui/buttons/Button_Hover_3Slides.png" id="4_plvne"]
+
+[node name="EndGameScreen" type="Control" unique_id=818712462]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0h6i1")
+
+[node name="EndGameBackground" parent="." unique_id=193193293 instance=ExtResource("2_6lcay")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=18439228]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.46666667)
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=1037421002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Result" type="Label" parent="VB" unique_id=1539207382]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_5pifh")
+theme_override_font_sizes/font_size = 82
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="VB" unique_id=1044635582]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Replay" type="TextureButton" parent="VB/Buttons" unique_id=1873616019]
+custom_minimum_size = Vector2(225, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0h6i1")
+texture_pressed = ExtResource("3_6lcay")
+texture_hover = ExtResource("4_plvne")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Buttons/Replay" unique_id=1921146026]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_5pifh")
+theme_override_font_sizes/font_size = 30
+text = "Replay"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="TextureButton" parent="VB/Buttons" unique_id=1228121033]
+custom_minimum_size = Vector2(225, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("2_0h6i1")
+texture_pressed = ExtResource("3_6lcay")
+texture_hover = ExtResource("4_plvne")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="VB/Buttons/MainMenu" unique_id=1049324739]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.69411767)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 16
+theme_override_fonts/font = ExtResource("1_5pifh")
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
